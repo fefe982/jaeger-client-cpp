@@ -26,7 +26,7 @@ HTTPTransporter::HTTPTransporter(const net::URI& endpoint, int maxPacketSize)
     , _buffer(new apache::thrift::transport::TMemoryBuffer(_maxPacketSize))
     , _serverAddr(net::IPAddress::v4(endpoint._host, endpoint._port))
     , _httpClient(new ::apache::thrift::transport::THttpClient(
-        _buffer, endpoint._host, endpoint._path + "?format=jaeger.thrift"))
+        _buffer, endpoint.authority(), endpoint._path + "?format=jaeger.thrift"))
 {
     using TProtocolFactory = apache::thrift::protocol::TProtocolFactory;
     using TBinaryProtocolFactory =
