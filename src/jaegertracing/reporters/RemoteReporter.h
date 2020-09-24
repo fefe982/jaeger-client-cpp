@@ -26,8 +26,8 @@
 #include "jaegertracing/Compilers.h"
 
 #include "jaegertracing/Logging.h"
-#include "jaegertracing/Span.h"
 #include "jaegertracing/Sender.h"
+#include "jaegertracing/Span.h"
 #include "jaegertracing/metrics/Metrics.h"
 #include "jaegertracing/reporters/Reporter.h"
 
